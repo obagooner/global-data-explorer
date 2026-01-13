@@ -24,6 +24,21 @@ function clearCountries() {
 }
 
 /* -----------------------------
+   Skeleton Loading
+------------------------------ */
+
+function showSkeletons(count = 8) {
+  clearCountries();
+  hideStatus();
+
+  for (let i = 0; i < count; i++) {
+    const skeleton = document.createElement("div");
+    skeleton.className = "skeleton";
+    countriesContainer.appendChild(skeleton);
+  }
+}
+
+/* -----------------------------
    Render Country Cards
 ------------------------------ */
 
@@ -44,7 +59,11 @@ function renderCountries(countries) {
     card.className = "country-card";
 
     card.innerHTML = `
-      <img src="${country.flags.svg}" alt="Flag of ${country.name.common}" />
+      <img 
+        src="${country.flags.svg}" 
+        alt="Flag of ${country.name.common}" 
+        loading="lazy"
+      />
       <h3>${country.name.common}</h3>
       <p><strong>Region:</strong> ${country.region}</p>
       <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
@@ -57,15 +76,16 @@ function renderCountries(countries) {
 }
 
 /* -----------------------------
-   Fetch Data
+   Fetch Data (FIXED API)
 ------------------------------ */
 
 async function fetchCountries() {
-  showStatus("Loading country data...");
+  showSkeletons();
 
   try {
     const response = await fetch(
-  "https://restcountries.com/v3.1/all?fields=name,flags,region,population");
+      "https://restcountries.com/v3.1/all?fields=name,flags,region,population"
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch country data");
@@ -80,7 +100,7 @@ async function fetchCountries() {
     filteredCountries = countriesData;
     renderCountries(filteredCountries);
   } catch (error) {
-    showStatus("Unable to load data. Please try again later.");
+    showStatus("Unable to load country data. Please try again later.");
     console.error(error);
   }
 }
