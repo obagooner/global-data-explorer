@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Data Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Global Data Explorer</h1>
+    <p>Explore country data from a public API</p>
+  </header>
+
+  <main class="app-container">
+    <section class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by country name..."
+        aria-label="Search countries"
+      />
+
+      <select id="regionFilter" aria-label="Filter by region">
+        <option value="">All Regions</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </section>
+
+    <section id="statusMessage" class="status hidden"></section>
+
+    <section id="countriesContainer" class="countries-grid">
+      <!-- Country cards injected here -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
