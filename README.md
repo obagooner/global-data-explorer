@@ -175,13 +175,13 @@ This structure allows easy extension (sorting, pagination, charts).
 ## 📸 Screenshots
 
 ### Overview
-![Overview](Assets/overview.png)
+![Overview](https://github.com/obagooner/global-data-explorer/blob/main/Assets/overview.png?raw=true)
 
 ### Search Functionality
-![Search](Assets/search.png)
+![Search](https://github.com/obagooner/global-data-explorer/blob/main/Assets/search.png?raw=true)
 
 ### Region Filtering
-![Filter](Assets/filter.png)
+![Filter](https://github.com/obagooner/global-data-explorer/blob/main/Assets/filter.png?raw=true)
 
 
 
