@@ -174,9 +174,12 @@ This structure allows easy extension (sorting, pagination, charts).
 
 📸 Screenshots
 
-![Overview](Assets/overview.png)
-![Search](Assets/search.png)
-![Filter](Assets/filter.png)
+![Overview](./Assets/overview.png)
+
+![Search](./Assets/search.png)
+
+![Filter](./Assets/filter.png)
+
 
 
 🚀 Local Setup
