@@ -172,13 +172,17 @@ No frameworks were used intentionally to demonstrate core competency.
 This structure allows easy extension (sorting, pagination, charts).
 
 
-📸 Screenshots
+## 📸 Screenshots
 
-![Overview](./Assets/overview.png)
+### Overview
+![Overview](https://raw.githubusercontent.com/obagooner/global-data-explorer/main/Assets/overview.png)
 
-![Search](./Assets/search.png)
+### Search Functionality
+![Search](https://raw.githubusercontent.com/obagooner/global-data-explorer/main/Assets/search.png)
 
-![Filter](./Assets/filter.png)
+### Region Filtering
+![Filter](https://raw.githubusercontent.com/obagooner/global-data-explorer/main/Assets/filter.png)
+
 
 
 
